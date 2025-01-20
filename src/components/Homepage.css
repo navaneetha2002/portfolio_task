@@ -1,0 +1,68 @@
+/* Container to Align Content and Buttons at Bottom */
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Start content from the top */
+    align-items: center;
+    min-height: 100vh; /* Full screen height */
+    background-color: #5d6a8d;
+    text-align: center;
+    padding: 20px;
+    position: relative; /* Allow positioning of the watermark */
+}
+
+/* Watermark Styling */
+.watermark {
+    position: absolute;
+    top: 0; /* Place watermark at the top */
+    left: 0; /* Align with the left edge */
+    width: 100%; /* Cover the entire width */
+    height: 50%; /* Cover half the height of the container */
+    font-size: 20rem; /* Large font size */
+    color: rgba(231, 234, 235, 0.1); /* Light blue color with transparency */
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    line-height: 1; /* Ensure text is not stretched vertically */
+    z-index: 0; /* Place watermark behind the image */
+}
+
+/* Profile Image Styling (Big and Positioned at the Top) */
+.img-fluid {
+    width: 600px; /* Larger width */
+    height: 400px; /* Larger height */
+    object-fit: cover;
+    border-radius: 20px; /* More rounded corners */
+    margin-top: 200px;
+    margin-bottom: 20px; /* Add some space below image */
+    border: 5px solid #007bff; /* Add a border for visual emphasis */
+    position: relative; /* To maintain proper layering */
+    z-index: 1; /* Ensure it's above the watermark */
+}
+
+/* Name and Welcome Text Below Image */
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/* Buttons Container Positioned at the Bottom */
+.button-container {
+    margin-top: auto; /* Pushes buttons to the bottom */
+    padding-bottom: 30px; /* Adds some space from the bottom */
+}
+
+/* Button Styling */
+.btn {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 25px;
+    width: 200px; /* Optional: Adjust button width */
+    margin: 10px 0; /* Spacing between buttons */
+}
