@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Roboto:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap');
+
+.profile-container {
+    min-height: 100vh; /* Ensure minimum height is the full height of the viewport */
+    width: 100vw; /* Full width of the viewport */
+    background-color: rgb(82, 129, 170);
+    color: white;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: flex-start; /* Align items at the top */
+    padding: 20px 50px; /* Add spacing around the edges */
+    font-family: 'Smooch Sans', sans-serif;
+    box-sizing: border-box; /* Include padding in the height/width */
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+.profile-header {
+    display: flex; /* Use flexbox */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center; /* Vertically center the items */
+    width: 100%; /* Full width */
+    margin-bottom: 20px; /* Space between the first and second row */
+}
+
+.profile-container h1 {
+    font-size: 7rem;
+    margin: 0; /* Remove default margin */
+    text-align: center; /* Align text to the left */
+    width: 100%; /* Allow heading to take up full width */
+}
+
+.profile-container p {
+    font-size: 2.9rem;
+    line-height: 1.6;
+    max-width: 600px; /* Limit paragraph width for better readability */
+    font-family: "Jersey 15", serif;
+    text-align: center; /* Align text to the center */
+    margin-right: 80px; /* Space between text and profile-image-1 */
+    margin-left: 5px;
+    margin-bottom: 20px; /* Add space below the paragraph */
+}
+
+/* Profile image styles */
+.profile-image-1 {
+    width: 500px; /* Fixed width for image */
+    height: 500px; /* Fixed height for image */
+    object-fit: cover; /* Ensure image maintains aspect ratio without distortion */
+    border-radius: 10px; /* Optional: add rounded corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Optional: shadow for image */
+}
+
+/* Container for the second row (image + header) */
+.second-row {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center; /* Vertically center the elements */
+    width: 100%; /* Full width */
+    margin-top: 20px; /* Add space above the second row */
+}
+
+/* Second image styles */
+.profile-image-2 {
+    width: 500px; /* Fixed width for image */
+    height: 500px; /* Fixed height for image */
+    object-fit: cover; /* Ensure image maintains aspect ratio without distortion */
+    border-radius: 10px; /* Optional: add rounded corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Optional: shadow for image */
+}
+
+/* Second header styles */
+.second-row h1 {
+    font-size: 7rem; /* Smaller font size for the second header */
+    text-align: center; /* Center the second header */
+    margin-right: 20px;
+    margin-left:150px; /* Space between header and image */
+    margin-bottom: 0; /* Remove space below header */
+    flex: 1; /* Allow the header to take available space */
+}
+
+
+
+.logo-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping to a new line */
+    justify-content: center; /* Center align the logos */
+    gap: 20px; /* Add space between logos */
+    margin-top: 20px; /* Add space above the container */
+}
+
+.logo {
+    width: 70px; /* Set width for logos */
+    height: 70px; /* Keep the height proportional */
+    object-fit: contain; /* Ensure the logo maintains aspect ratio */
+    background-color: transparent; /* Transparent background */
+}
+
+/* Optional: Add spacing between rows */
+.logo-container img:nth-child(4) {
+    margin-bottom: 20px; /* Add margin below the first row */
+}
+
+
+/* Make sure content can scroll */
+body {
+    margin: 0; /* Remove default margin */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.logo-container {
+    position: relative; /* Allows absolute positioning of child elements */
+    height: 300px; /* Adjust the container height */
+    width: 100%; /* Full width of the container */
+}
+
+/* Common styles for all logos */
+.logo {
+    position: absolute; /* Allow precise placement */
+    object-fit: contain; /* Ensure logos maintain their aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Optional: shadow effect */
+    background-color: transparent; /* Transparent background */
+}
+
+/* Individual styles for each logo */
+.logo-1 {
+    width: 60px;
+    height: 60px;
+    top: 50px; /* Distance from the top */
+    left: 350px; /* Distance from the left */
+}
+
+.logo-2 {
+    width: 60px;
+    height: 60px;
+    top: 50px;
+    left: 450px;
+}
+
+.logo-3 {
+    width: 60px;
+    height: 60px;
+    top: 50px;
+    left: 550px;
+}
+
+.logo-4 {
+    width: 60px;
+    height: 60px;
+    top: 50px;
+    left: 650px;
+}
+
+.logo-5 {
+    width: 60px;
+    height: 60px;
+    top: 150px;
+    left: 350px;
+}
+
+.logo-6 {
+    width: 60px;
+    height: 60px;
+    top: 150px;
+    left: 450px;
+}
+
+.logo-7 {
+    width: 60px;
+    height: 60px;
+    top: 150px;
+    left: 550px;
+}
+
+.logo-8 {
+    width: 60px;
+    height: 60px;
+    top: 150px;
+    left: 650px;
+}
+
+.third-row {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: space-between; /* Distribute space evenly between items */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Full width of the container */
+    margin-top: 50px; /* Add space above the row */
+    flex-wrap: nowrap; /* Ensure items stay in one line */
+}
+
+.third-row h1 {
+    font-size: 7rem; /* Adjust font size to be smaller */
+    text-align: center; /* Center align the text */
+    margin: 0; /* Remove unnecessary margins */
+    flex: 1; /* Allow it to take up space proportionally */
+    margin-right: 20px; /* Space on the right */
+    margin-left: 300px; /* Space on the left */
+}
+
+.third-row p1,
+.third-row p2 {
+    font-size: 2.9rem; /* Reduce font size for paragraphs */
+    line-height: 1.4; /* Adjust line height for better readability */
+    font-family: "Jersey 15", serif; /* Keep consistent font family */
+    text-align: center; /* Center the text */
+    margin: 0 10px; /* Space between elements */
+    word-wrap: break-word; /* Ensure text wraps within the container */
+     /* Limit the width of paragraphs */
+}
+
+.third-row p1 {
+    margin-left: 30px; /* Fine-tune spacing */
+    margin-top: 30px;
+    max-width: 600px;
+}
+
+.third-row p2 {
+    margin-left: 400px; /* Fine-tune spacing */
+    margin-right: 30px;
+}
+
+.navbar {
+    background-color: white;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-links li {
+    margin-right: 20px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: rgb(82, 129, 170);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #294861; /* Highlight color on hover */
+  }
+  

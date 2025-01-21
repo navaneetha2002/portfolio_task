@@ -1,0 +1,78 @@
+.container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between heading and content */
+  }
+  
+  .container h1 {
+    font-size: 7rem; /* Large heading */
+    color: white; /* Adjust color */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Align heading to the left */
+    margin-bottom: 20px; /* Add space below heading */
+  }
+  
+  .container .content {
+    display: flex;
+    justify-content: space-between; /* Space between text and image */
+    align-items: flex-start; /* Align items to the top */
+  }
+  
+  .text-section {
+    flex: 2; /* Allocate more space to the text section */
+    text-align: left; /* Align text to the left */
+  }
+  
+  .text-section .description {
+    font-size: 1.6rem; /* Font size for paragraphs */
+    line-height: 1.8; /* Line height for better readability */
+    color: white; /* Text color */
+    margin-bottom: 20px; /* Space between paragraphs */
+    max-width: 60%; /* Limit paragraph width */
+  }
+  
+  .image-section {
+    flex: 1; /* Allocate space for the image */
+    display: flex;
+    justify-content: flex-end; /* Push the image to the right */
+    align-items: flex-start; /* Align the image to the top */
+  }
+  
+  .image-section .filmroll {
+    max-width: 100%; /* Ensure the image fits within its container */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 0; /* Ensure no additional top margin */
+  }
+  
+  .navbar {
+    background-color: white;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-links li {
+    margin-right: 20px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: rgb(82, 129, 170);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #294861; /* Highlight color on hover */
+  }
+  

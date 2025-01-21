@@ -2,15 +2,17 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage from './components/Homepage';
 import Contact from './components/Contact';
-import PortfolioPage from './components/PortfolioPage';
+import Projects from './components/Projects';
+import Profile from './components/Profile';
 
 const App = () => {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/portfolio" element={<PortfolioPage />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
   );
