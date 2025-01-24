@@ -4,18 +4,18 @@ import './Homepage.css';
 import profileImage from '../assets/images/girl2done.png';
 
 const Homepage = () => {
-  const navigate = useNavigate(); // Hook for navigation
+  const navigate = useNavigate();
 
   const handleProjectsClick = () => {
-    navigate('/projects'); // Navigate to the Projects page
+    navigate('/projects');
   };
 
   const handleContactClick = () => {
-    navigate('/contact'); // Navigate to the Contact page
+    navigate('/contact');
   };
 
   const handleProfileClick = () => {
-    navigate('/profile'); // Navigate to the Profile page
+    navigate('/profile');
   };
 
   return (
@@ -25,6 +25,9 @@ const Homepage = () => {
       <div className="watermark watermark-2">PORTFOLIO</div>
       <div className="watermark watermark-3">PORTFOLIO</div>
       <div className="watermark watermark-4">PORTFOLIO</div>
+
+      
+    
 
       {/* Profile Image */}
       <div className='img-container'>
@@ -37,17 +40,11 @@ const Homepage = () => {
 
       {/* Text and Buttons */}
       <div className="text-container">
-        {/* Name */}
         <h1>NAVANEETHA PRAKASH</h1>
+        <p>Lets Code, Create and Inspire together!</p>
 
-        {/* Welcome Message */}
-        <p>
-          Lets Code, Create and Inspire together!
-        </p>
-
-        {/* Buttons Container */}
         <div className="button-container">
-        <button onClick={handleProfileClick} className="btn btn-tertiary">
+          <button onClick={handleProfileClick} className="btn btn-tertiary">
             PROFILE
           </button>
           <button onClick={handleProjectsClick} className="btn btn-primary">
@@ -56,8 +53,6 @@ const Homepage = () => {
           <button onClick={handleContactClick} className="btn btn-secondary">
             CONTACT ME
           </button>
-          {/* New Profile Button */}
-          
         </div>
       </div>
     </div>

@@ -1,78 +1,301 @@
-.container {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Space between heading and content */
-  }
-  
-  .container h1 {
-    font-size: 7rem; /* Large heading */
-    color: white; /* Adjust color */
-    font-weight: bold; /* Bold text */
-    text-align: center; /* Align heading to the left */
-    margin-bottom: 20px; /* Add space below heading */
-  }
-  
-  .container .content {
-    display: flex;
-    justify-content: space-between; /* Space between text and image */
-    align-items: flex-start; /* Align items to the top */
-  }
-  
-  .text-section {
-    flex: 2; /* Allocate more space to the text section */
-    text-align: left; /* Align text to the left */
-  }
-  
-  .text-section .description {
-    font-size: 1.6rem; /* Font size for paragraphs */
-    line-height: 1.8; /* Line height for better readability */
-    color: white; /* Text color */
-    margin-bottom: 20px; /* Space between paragraphs */
-    max-width: 60%; /* Limit paragraph width */
-  }
-  
-  .image-section {
-    flex: 1; /* Allocate space for the image */
-    display: flex;
-    justify-content: flex-end; /* Push the image to the right */
-    align-items: flex-start; /* Align the image to the top */
-  }
-  
-  .image-section .filmroll {
-    max-width: 100%; /* Ensure the image fits within its container */
-    height: auto; /* Maintain aspect ratio */
-    margin-top: 0; /* Ensure no additional top margin */
-  }
-  
-  .navbar {
+/* Navbar */
+.navbar {
     background-color: white;
     padding: 10px;
     position: sticky;
     top: 0;
     z-index: 1000;
-  }
-  
-  .navbar-links {
+}
+
+.navbar-links {
     list-style-type: none;
     display: flex;
     justify-content: flex-start;
     margin: 0;
     padding: 0;
-  }
-  
-  .navbar-links li {
+}
+
+.navbar-links li {
     margin-right: 20px;
-  }
-  
-  .nav-link {
+}
+
+.nav-link {
     text-decoration: none;
     color: rgb(82, 129, 170);
     font-size: 1.2rem;
     transition: color 0.3s ease;
-  }
-  
-  .nav-link:hover {
-    color: #294861; /* Highlight color on hover */
-  }
-  
+}
+
+.nav-link:hover {
+    color: #294861;
+}
+
+/* Card */
+.card-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Additional Content Section */
+.additional-content {
+    margin-bottom: 40px;
+}
+
+.additional-content h2 {
+    font-size: 5rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.additional-content p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Card Animation */
+.card-animation {
+    margin-bottom: 20px;
+}
+
+/* Main Content Section */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.text-section {
+    flex: 2;
+    text-align: left;
+    padding-right: 20px;
+}
+
+/* Text Section */
+.text-section h2 {
+    font-size: 3rem;
+    margin-left: 50px;
+    color: #294861;
+    margin-bottom: 20px;
+}
+
+.text-section h2:nth-of-type(1) {
+    margin-top: 80px;
+}
+
+.text-section h2:nth-of-type(2) {
+    margin-top: 250px;
+}
+
+.text-section h2:nth-of-type(3) {
+    margin-top: 200px;
+}
+
+.text-section p {
+    font-size: 2rem;
+    margin-left: 55px;
+}
+
+/* View More Button */
+.view-more-btn {
+    background-color: #294861;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+    margin-left: 70px;
+}
+
+.view-more-btn:hover {
+    background-color: white;
+    color: #294861;
+}
+
+/* Container */
+.container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.container h1 {
+    font-size: 7rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.container .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.text-section {
+    flex: 2;
+    text-align: left;
+}
+
+.text-section .description {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: white;
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+
+.image-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    padding: 20px;
+    margin-right: 50px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #294861;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: #666;
+    font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .container h1 {
+        font-size: 5rem; /* Reduce font size on medium screens */
+    }
+
+    .container .content {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+    }
+
+    .text-section {
+        flex: 1; /* Equal width for text section */
+        margin-left: 10px;
+        text-align: left;
+    }
+
+    .image-section {
+        flex: 1; /* Equal width for image section */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .view-more-btn {
+        font-size: 1rem;
+        margin-left: 0;
+        width: 100%; /* Full width for button on smaller screens */
+    }
+}
+
+@media (max-width: 1000px) {
+    .content {
+        flex-direction: column; /* Stack the content vertically */
+    }
+
+    .text-section, .image-section {
+        flex: 1; /* Equal width for both sections */
+        align-items: center; /* Center-align content */
+    }
+
+    .image-section {
+        align-items: center; /* Center-align the cards */
+    }
+
+    .card {
+        margin-right: 0; /* Remove right margin on smaller screens */
+        width: 90%; /* Make cards take more space */
+    }
+
+    .text-section h2 {
+        font-size: 2.5rem; /* Adjust font size */
+        margin-left: 20px;
+    }
+
+    .text-section p {
+        font-size: 1.6rem; /* Adjust paragraph font size */
+        margin-left: 20px;
+    }
+
+    .view-more-btn {
+        font-size: 1rem;
+        width: 100%; /* Button takes full width */
+    }
+
+    .container h1 {
+        font-size: 4rem; /* Smaller font size for large screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .container h1 {
+        font-size: 3rem; /* Adjust heading font size */
+    }
+
+    .card {
+        width: 100%; /* Cards take full width */
+        margin-right: 0; /* Remove margin */
+    }
+
+    .text-section h2 {
+        font-size: 2rem; /* Adjust heading font size */
+        margin-left: 0;
+    }
+
+    .text-section p {
+        font-size: 1.4rem; /* Adjust paragraph font size */
+        margin-left: 0;
+    }
+
+    .view-more-btn {
+        width: 100%; /* Full width for button on smaller screens */
+        padding: 12px; /* Larger padding for touch-friendly interaction */
+    }
+
+    .main-content {
+        flex-direction: column; /* Stack text and image sections */
+        align-items: center;
+    }
+
+    .text-section {
+        padding-right: 0; /* Remove padding on smaller screens */
+        text-align: center; /* Center align text */
+    }
+
+    .image-section {
+        align-items: center; /* Center align image section */
+    }
+}

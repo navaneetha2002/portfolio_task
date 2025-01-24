@@ -64,6 +64,32 @@ const Profile = () => {
           </p2>
           <h1>EXPERIENCE <br /> AND GOALS </h1>
         </div>
+
+        {/* Fourth Row: Education Header */}
+        <div className="fourth-row">
+          <h1>EDUCATION</h1>
+          <p>
+            I hold a Bachelor's degree in Computer Science from NSS College of Engineering, Kerala where I graduated with a CGPA of 8.31.
+          </p>
+          <p>
+            I completed my 12th grade scoring 95% under Kerala state board in GMMGHSS, Kerala.
+          </p>
+          <p>
+            My 10th grade was done at Bharathamatha CMI Public School, Kerala with 96% under CBSE.
+          </p>
+        </div>
+
+        {/* Fifth Row: Interests Header */}
+        <div className="fifth-row">
+          <h1>INTERESTS</h1>
+          <p>
+            I love to groove and I was a part of college dance crew. Trying new styles of dancing is my chill pill.
+          </p>
+          <p>
+            Scribbling and sketching my thoughts and listening to music is my comfort zone. My genre of music depends on my mood. 
+          </p>
+          
+        </div>
       </div>
     </div>
   );

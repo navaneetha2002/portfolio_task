@@ -117,8 +117,8 @@ body {
     position: absolute; /* Allow precise placement */
     object-fit: contain; /* Ensure logos maintain their aspect ratio */
     border-radius: 10px; /* Optional: rounded corners */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Optional: shadow effect */
-    background-color: transparent; /* Transparent background */
+     /* Optional: shadow effect */ /* Transparent background */
+    
 }
 
 /* Individual styles for each logo */
@@ -210,12 +210,13 @@ body {
 .third-row p1 {
     margin-left: 30px; /* Fine-tune spacing */
     margin-top: 30px;
-    max-width: 600px;
+    max-width: 800px;
 }
 
 .third-row p2 {
     margin-left: 400px; /* Fine-tune spacing */
     margin-right: 30px;
+    max-width:800px;
 }
 
 .navbar {
@@ -249,3 +250,59 @@ body {
     color: #294861; /* Highlight color on hover */
   }
   
+  /* Fourth Row: Education Section */
+.fourth-row {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center the items */
+    align-items: center; /* Center the items horizontally */
+    width: 100%; /* Full width */
+    margin-top: 50px; /* Add space above the fourth row */
+    padding: 20px 0; /* Add some padding to the top and bottom */
+    background-color: rgb(66, 103, 142); /* Optional: Background color for the Education section */
+    color: white; /* Text color */
+}
+
+.fourth-row h1 {
+    font-size: 7rem; /* Adjust font size for the header */
+    margin-bottom: 20px; /* Space between header and content */
+    text-align: center; /* Center the header */
+    font-family: 'Smooch Sans', sans-serif; /* Font style for the header */
+}
+
+.fourth-row p {
+    font-size: 2rem; /* Font size for the paragraph */
+    line-height: 1.6; /* Line height for better readability */
+    max-width: 1100px; /* Limit the paragraph width */
+    text-align: center; /* Center the paragraph text */
+    margin-top: 20px; /* Space above the paragraph */
+    font-family: 'Jersey 15', serif; /* Font family for the paragraph */
+    margin-bottom: 40px; /* Add space below the paragraph */
+}
+
+/* Fifth Row: Interests Section */
+.fifth-row {
+    display: flex; /* Use flexbox */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center; /* Vertically center the items */
+    width: 100%; /* Full width */
+    margin-bottom: 20px; /* Space between the first and second row */
+}
+
+.fifth-row h1 {
+    font-size: 7rem;
+    margin: 0; /* Remove default margin */
+    text-align: center; /* Align text to the left */
+    width: 100%; /* Allow heading to take up full width */
+}
+
+.fifth-row p {
+    font-size: 2rem; /* Font size for the paragraph */
+    line-height: 1.6; /* Line height for better readability */
+    max-width: 800px; /* Limit the paragraph width */
+    text-align: center; /* Center the paragraph text */
+    margin-top: 60px; /* Space above the paragraph */
+    font-family: 'Jersey 15', serif; /* Font family for the paragraph */
+    margin-bottom: 40px; /* Add space below the paragraph */
+    margin-left: 30px;
+}

@@ -1,0 +1,284 @@
+/* Contact Page Styling */
+.mb-3 {
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+    background-color: #f2f6fa; /* Light blue-gray to match the theme */
+    padding: 30px; /* Add padding for spacing */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border: 1px solid #dfe6ec; /* Soft border for a refined touch */
+    font-family: 'Arial', sans-serif; /* Clean and readable font */
+    align-items: center;
+    width: 100%; /* Make form occupy full container width */
+}
+
+/* Label Styling */
+.form-label {
+    font-size: 1.2rem; /* Slightly larger for emphasis */
+    color: #3f6d92; /* Matches the theme color */
+    font-weight: bold; /* Makes labels stand out */
+    margin-bottom: 5px; /* Adds spacing below labels */
+}
+
+.form-label-name,
+.form-label-email,
+.form-label-subject {
+    margin-right: 35px;
+    color: #3f6d92;
+}
+
+.form-label-msg {
+    margin-top: 5px;
+    color: #3f6d92;
+}
+
+/* Input Fields Styling */
+.form-control {
+    border: 1px solid #cbd4db; /* Subtle border color */
+    padding: 12px; /* Comfortable padding */
+    font-size: 1rem; /* Standard readable font size */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #ffffff; /* White background for contrast */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth interaction */
+    margin-left: 20px;
+    min-width: 300px;
+}
+
+.form-control:focus {
+    border-color: #82a7b5; /* Matches the theme */
+    box-shadow: 0 0 6px rgba(130, 167, 181, 0.5); /* Subtle glow on focus */
+    outline: none; /* Removes default outline */
+}
+
+/* Message Field Styling */
+.form-control-msg {
+    border: 1px solid #cbd4db; /* Subtle border color */
+    padding: 12px; /* Comfortable padding */
+    font-size: 1rem; /* Standard readable font size */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #ffffff; /* White background for contrast */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth interaction */
+    margin-left: 20px;
+    resize: vertical; /* Allows vertical resizing only */
+    min-height: 120px; /* Ensures enough space for text input */
+    min-width: 500px;
+}
+
+/* Button Styling */
+button[type="submit"] {
+    background-color: #294861; /* Primary theme color */
+    color: white; /* Contrasting text */
+    font-size: 1.2rem; /* Slightly larger font for buttons */
+    padding: 14px 30px; /* Balanced padding */
+    border: none; /* Clean look */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Indicates interactivity */
+    transition: background-color 0.3s, transform 0.2s; /* Adds smooth animations */
+    margin-top: 20px; /* Optional: Add spacing above the button */
+    display: inline-block;
+    text-align: center;
+    min-width: 500px;
+}
+
+button[type="submit"]:hover {
+    background-color: #82a7b5; /* Lighter shade for hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98); /* Button presses in slightly */
+}
+
+/* Placeholder Styling */
+::placeholder {
+    color: #a6b3c1; /* Light gray placeholder text */
+    font-style: italic; /* Differentiates from user input */
+}
+
+/* Error Message Styling */
+.error-message {
+    color: #d9534f; /* Red for error messages */
+    font-size: 0.9rem; /* Slightly smaller text */
+    margin-top: 5px; /* Adds spacing */
+}
+
+/* Container for header, paragraph, and form */
+.containercontact {
+    display: flex; /* Enables horizontal layout */
+    flex-wrap: nowrap; /* Prevents wrapping of elements */
+    justify-content: space-between; /* Push elements to edges */
+    align-items: center; /* Align items vertically */
+    max-width: 1200px; /* Set a maximum width for the container */
+    margin: 50px auto; /* Center container horizontally */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding/border in width */
+    gap: 20px; /* Add spacing between image and form */
+    position: relative; /* Context for child elements */
+    z-index: 0;
+}
+
+/* Image Container */
+.connectimg {
+    flex: 1; /* Allow image container to grow/shrink */
+    max-width: 40%; /* Restrict maximum width */
+    display: flex; /* Enables alignment of child elements */
+    justify-content: flex-start; /* Align image to the left */
+    align-items: center; /* Center image vertically */
+    margin: 0; /* Remove extra margins */
+}
+
+.img-connect {
+    width: 100%; /* Scale image to fit container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure proper alignment */
+}
+
+/* Text Content (heading and paragraph) */
+.text-content {
+    flex: 1; /* Allow text container to grow/shrink */
+    max-width: 30%; /* Restrict maximum width */
+    display: flex;
+    flex-direction: column; /* Stack heading and paragraph vertically */
+    justify-content: center; /* Center content vertically */
+    padding: 20px;
+}
+
+.text-content h1 {
+    font-size: 3rem;
+    color: #294861;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.text-content p {
+    font-size: 1.5rem;
+    color: black;
+    margin: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: white;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-links {
+    list-style-type: none; /* Removes the bullets */
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    margin-right: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: rgb(82, 129, 170);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #294861; /* Highlight color on hover */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .containercontact {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .connectimg,
+    .contactforms,
+    .text-content {
+        max-width: 100%; /* Full width on smaller screens */
+        margin: 0; /* Remove margin */
+    }
+
+    .connectimg {
+        max-width: 100%;
+        margin-bottom: 20px; /* Spacing below the image */
+    }
+
+    .contactforms {
+        margin-top: 20px; /* Space above the form */
+    }
+    
+    .text-content h1 {
+        font-size: 2rem; /* Adjust font size for header */
+    }
+
+    .text-content p {
+        font-size: 1.1rem;
+        font-weight: bold; /* Adjust font size for paragraph */
+    }
+
+    button[type="submit"] {
+        font-size: 1rem; /* Smaller font size for buttons */
+        padding: 12px 20px; /* Adjust padding */
+        min-width: 100%; /* Allow button to take full width */
+    }
+
+    .form-control, .form-control-msg {
+        font-size: 0.9rem; /* Adjust input font size */
+        width: 100%; /* Ensure inputs take full width on mobile */
+        margin-left: 0; /* Remove margin for inputs on mobile */
+    }
+
+    .form-label {
+        font-size: 1rem; /* Adjust label font size for small screens */
+    }
+}
+
+@media (max-width: 1024px) {
+    .containercontact {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        padding: 20px;
+        gap: 20px; /* Add space between sections */
+    }
+
+    .connectimg,
+    .contactforms {
+        max-width: 100%; /* Full width on smaller screens */
+        margin: 0; /* Remove margin */
+    }
+
+    .connectimg {
+        order: 2; /* Move the image below the form */
+        margin-top: 20px; /* Add space between form and image */
+    }
+
+    .contactforms {
+        order: 1; /* Keep form above image */
+    }
+
+    .text-content h1 {
+        font-size: 2rem;
+    }
+
+    .form-control,
+    .form-control-msg {
+        font-size: 0.9rem;
+        width: 100%; /* Ensure inputs take full width on mobile */
+        margin-left: 0; /* Remove margin for inputs on mobile */
+    }
+
+    button[type="submit"] {
+        font-size: 1rem;
+        padding: 12px 20px;
+        min-width: 100%; /* Button takes full width */
+    }
+}
