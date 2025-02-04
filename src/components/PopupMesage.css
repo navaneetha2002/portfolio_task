@@ -1,0 +1,49 @@
+/* Style for the popup message */
+.popup-message {
+    position: fixed; /* Fixed position to appear on top of content */
+    top: 20px; /* Distance from the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    background-color: #294861; /* Dark background */
+    color: white; /* White text */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1.2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for pop-up effect */
+    z-index: 2000; /* Ensures the popup is above other content */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    max-width: 400px;
+    width: 100%; /* Ensure responsiveness */
+}
+
+/* Show the popup message */
+.popup-message.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Optional animation to make the message disappear after a few seconds */
+.popup-message.hide {
+    animation: fadeOut 3s forwards;
+}
+
+/* Animation for fading out the popup message */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .popup-message {
+        width: 90%; /* Ensure it fits on small screens */
+        font-size: 1rem; /* Slightly smaller font size */
+    }
+}

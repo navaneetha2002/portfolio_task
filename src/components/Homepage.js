@@ -1,7 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Homepage.css';
-import profileImage from '../assets/images/girl2done.png';
+import profileImage from '../assets/images/girllaptop.json';
+import Lottie from 'react-lottie';
+import Navbar from './Navbar';
 
 const Homepage = () => {
   const navigate = useNavigate();
@@ -11,36 +13,45 @@ const Homepage = () => {
   };
 
   const handleContactClick = () => {
-    navigate('/contact');
+    
+    window.open('/assets/Resumee new Navn.pdf', '_blank');
   };
 
   const handleProfileClick = () => {
     navigate('/profile');
   };
 
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: profileImage,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice',
+    },
+};
+
   return (
     <div className="homepage-container">
-      {/* Watermark Texts */}
+      <div>
+        <Navbar />
+      </div>
+
+      
       <div className="watermark watermark-1">PORTFOLIO</div>
       <div className="watermark watermark-2">PORTFOLIO</div>
       <div className="watermark watermark-3">PORTFOLIO</div>
-      <div className="watermark watermark-4">PORTFOLIO</div>
 
-      
-    
-
-      {/* Profile Image */}
+     
       <div className='img-container'>
-        <img
-          src={profileImage}
-          alt="Profile"
-          className="img-fluid"
-        />
+        <Lottie options={defaultOptions} height={500} width={500} />
       </div>
 
-      {/* Text and Buttons */}
+      <div>
+        <h1 className='myname'>NAVANEETHA PRAKASH</h1>
+      </div>
+
+      
       <div className="text-container">
-        <h1>NAVANEETHA PRAKASH</h1>
         <p>Lets Code, Create and Inspire together!</p>
 
         <div className="button-container">
@@ -51,7 +62,7 @@ const Homepage = () => {
             PROJECTS
           </button>
           <button onClick={handleContactClick} className="btn btn-secondary">
-            CONTACT ME
+            RESUME
           </button>
         </div>
       </div>

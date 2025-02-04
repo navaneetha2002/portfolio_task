@@ -1,0 +1,292 @@
+/* Homepage.css */
+
+/* Import custom font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap');
+
+/* Keyframe animation for fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(82, 129, 170); /* Matches the container */
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+  .homepage-container {
+    display: flex;
+    flex-direction: row; /* Align elements horizontally */
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    background-size: cover;
+    background-color: rgb(82, 129, 170);
+    background-position: center center;
+    background-attachment: fixed;
+    text-align: left;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  
+
+
+
+
+.watermark {
+  position: absolute;
+  width: 100%;
+  font-size: 20rem;
+  color: rgba(231, 234, 235, 0.1);
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  line-height: 1;
+  z-index: 0;
+  top: 0;
+}
+
+/* Position for each watermark */
+.watermark-1 {
+  top: 0%;
+}
+
+.watermark-2 {
+  top: 25%;
+}
+
+.watermark-3 {
+  top: 50%;
+}
+
+.watermark-4 {
+  top: 75%;
+}
+
+/* Hover effect for h1 */
+h1 {
+  font-family: 'Smooch Sans', sans-serif;
+  font-size: 10rem;
+  font-weight: bold;
+  color: #fff;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+h1:hover {
+  color: #294861; /* Change color on hover */
+  transform: scale(1.01); /* Slightly enlarge the text on hover */
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover effect for p */
+p {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #fff;
+  font-family: 'Smooch Sans', sans-serif;
+  animation: fadeIn 2s ease-in-out;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+p:hover {
+  color: #294861;  /* Change color on hover */
+  transform: translateX(10px); /* Add slight movement to the right */
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Align buttons, heading, and paragraph to the right */
+.text-container {
+  margin-left: 50px; /* Add some space between the animation and text */
+  text-align: left;
+  z-index: 1;
+  width: 100%; /* Ensure this container occupies full width */
+  display: flex;
+  flex-direction: column; /* Stack text vertically */
+  align-items: flex-start; /* Align text to the left */
+}
+
+.button-container {
+  margin-top: 30px; /* Space between the text and buttons */
+}
+
+/* Lottie animation container styles */
+.img-container {
+  position: relative;
+  width: 1000px; /* Set a specific width for the animation */
+  height: auto; /* Adjust height automatically */
+  display: flex; /* Use flex for proper alignment */
+  justify-content: center; /* Center the animation horizontally */
+  align-items: center; /* Center the animation vertically */
+}
+
+.lottie-animation {
+  width: 100%; /* Ensure the animation is responsive */
+  max-width: 400px; /* Limit the maximum width of the animation */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* General Button Styles */
+.btn {
+  font-size: 1.6rem;
+  padding: 12px 30px;
+  border-radius: 7px;
+  width: auto;
+  margin: 50px 20px;
+  font-weight: bold;
+  border: 2px solid white; /* Add a white border to all buttons */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Smooch Sans', sans-serif;
+}
+
+/* Button Colors */
+.btn-primary {
+  background-color: rgba(231, 234, 235, 0.1); /* Gradient background */
+  color: white;
+}
+
+.btn-primary:hover {
+  color: #294861;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Add shadow on hover */
+  transform: translateY(-4px); /* Lift effect on hover */
+  border: 2px solid white;
+}
+
+.btn-secondary {
+  background-color: rgba(231, 234, 235, 0.1);
+  color: white;
+}
+
+.btn-secondary:hover {
+  color: #294861;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+.btn-tertiary {
+  background-color: rgba(231, 234, 235, 0.1);
+  color: white;
+}
+
+.btn-tertiary:hover {
+  color: #294861;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+/* Focus Effect */
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.6); /* Glow effect */
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5); /* Temporary background for debugging */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.navbar-links {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin-left: 20px;
+}
+
+.nav-icon {
+  font-size: 2rem;
+  color: rgb(82, 129, 170);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-icon:hover {
+  color: #294861;
+}
+
+.navbar-links li i {
+  font-size: 2rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .homepage-container {
+    flex-direction: column; /* Stack elements vertically on tablets and smaller screens */
+  }
+
+  .img-container {
+    width: 100%; /* Full width container for smaller screens */
+    justify-content: center; /* Center align animation */
+  }
+
+  .lottie-animation {
+    max-width: 300px; /* Scale down for smaller screens */
+  }
+
+  .text-container {
+    margin-left: 0; /* Remove margin for better alignment on smaller screens */
+    text-align: center; /* Center text on smaller screens */
+  }
+
+  h1 {
+    font-size: 5rem; /* Adjust heading size */
+  }
+
+  p {
+    font-size: 1.8rem; /* Adjust paragraph size */
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 80%; /* Buttons take up more space on small screens */
+    margin: 10px 0;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .homepage-container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+  }
+
+  .lottie-animation {
+    max-width: 250px; /* Smaller animation size for mobile */
+  }
+
+  .btn {
+    width: 90%; /* Buttons take full width */
+    margin: 10px 0;
+  }
+}

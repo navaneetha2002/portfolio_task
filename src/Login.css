@@ -1,0 +1,70 @@
+/* Login Page Styles */
+
+/* Centering the login form properly */
+login-form {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f4;
+}
+
+.login-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+ 
+  height: 100%;
+  background: #f4f4f4;
+  top:50%;
+  left: 50%;
+    background: rgb(66, 103, 142);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-left: 37%;
+    margin-top: 2%;
+    
+  }
+
+  .login-container input,
+.login-container textarea {
+    padding: 20px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 400px;
+    margin : auto;
+}
+  
+h2 {
+    margin-bottom: 15px;
+    color: white;
+    font-size: 30px;
+  font-weight: 600;
+  font-family: 'Smooch Sans''sans-seriff';
+  text-align: center;
+  margin-top: 20%;
+}
+  
+  .login-container button {
+    padding: 10px;
+    background-color: rgb(66, 103, 142);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+  
+
+  
+  .login-container button:hover {
+    background-color: white;
+    color:rgb(66, 103, 142);
+  }

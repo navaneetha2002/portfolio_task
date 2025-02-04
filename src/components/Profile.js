@@ -1,98 +1,111 @@
-import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link for navigation
-import './Profile.css'; // Optional: Add custom CSS for Profile if needed
-import profileImage1 from '../assets/images/codemeetcreativity.png';
-import profileImage2 from '../assets/images/design_tmrw.png';
-import logo1 from '../assets/images/c_logo.png';
-import logo2 from '../assets/images/css.png';
-import logo3 from '../assets/images/github.png';
-import logo4 from '../assets/images/html.png';
-import logo5 from '../assets/images/javalang.png';
-import logo6 from '../assets/images/python_lang.png';
-import logo7 from '../assets/images/react.png';
-import logo8 from '../assets/images/springboot.png';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import Navbar from './Navbar';
+import './Profile.css';
+
 
 const Profile = () => {
+
+    const [skills, setSkills] = useState([]);
+    const [education, setEducation] = useState([]);
+    const [aboutme, setAboutme] = useState([]);
+  
+   
+  useEffect(() => {
+    const fetchSkills = async () => {
+      try {
+        const response = await axios.get('http://localhost:8080/api/skills'); 
+        const updatedSkills = response.data.map((skill) => ({
+          ...skill,
+           image: `http://localhost:8080/api/skills/${skill.id}/image`,
+          }));
+
+  
+        setSkills(updatedSkills);
+
+        const educationResponse = await axios.get('http://localhost:8080/api/education');
+        setEducation(educationResponse.data);
+
+        const aboutmeResponse = await axios.get('http://localhost:8080/api/aboutme');
+        setAboutme(aboutmeResponse.data);
+
+
+
+
+
+      } catch (error) {
+        console.error('Error fetching skills:', error);
+      }
+    };
+
+    fetchSkills();
+  }, []);
   return (
     <div>
-      {/* Navigation Bar */}
-      <nav className="navbar">
-        <ul className="navbar-links">
-          <li>
-            <Link to="/" className="nav-link">HOME</Link>
-          </li>
-        </ul>
-      </nav>
-
+      
+      <div>
+      <Navbar />
+      
+    </div>
       <div className="profile-container">
+       
         <div className="profile-header">
-          <h1>ABOUT ME</h1>
-          <p>
-            Hi, I'm Navaneetha Prakash, an aspiring developer who is design enthusiastic and curious to learn.
-          </p>
-          <div>
-            <img src={profileImage1} alt="Profile" className="profile-image-1" />
+          <div className="profile-about">
+            <h1>ABOUT ME</h1>
           </div>
-        </div>
-
-        {/* Second Row: Profile Image 2 and Header */}
-        <div className="second-row">
-          <div>
-            <img src={profileImage2} alt="Profile" className="profile-image-2" />
+          <div className="about-para">
+          {aboutme.map((abt) => (
+            <div key={abt.id}>
+              <p>{abt.description}</p>
+            </div>
+          ))}
           </div>
-          <div>
-            <h1>MY SKILLS <br /> INCLUDE </h1>
-          </div>
-          <div className="logo-container">
-            <img src={logo1} alt="Logo 1" className="logo logo-1" />
-            <img src={logo2} alt="Logo 2" className="logo logo-2" />
-            <img src={logo3} alt="Logo 3" className="logo logo-3" />
-            <img src={logo4} alt="Logo 4" className="logo logo-4" />
-            <img src={logo5} alt="Logo 5" className="logo logo-5" />
-            <img src={logo6} alt="Logo 6" className="logo logo-6" />
-            <img src={logo7} alt="Logo 7" className="logo logo-7" />
-            <img src={logo8} alt="Logo 8" className="logo logo-8" />
-          </div>
-        </div>
-
-        <div className="third-row">
-          <p1>
-            Currently working as an Associate Software Engineer at Tarento Technologies Pvt Ltd.
-          </p1>
-          <p2>
-            Eager to contribute in innovative projects and to explore and improve my back-end skills.
-          </p2>
-          <h1>EXPERIENCE <br /> AND GOALS </h1>
-        </div>
-
-        {/* Fourth Row: Education Header */}
-        <div className="fourth-row">
-          <h1>EDUCATION</h1>
-          <p>
-            I hold a Bachelor's degree in Computer Science from NSS College of Engineering, Kerala where I graduated with a CGPA of 8.31.
-          </p>
-          <p>
-            I completed my 12th grade scoring 95% under Kerala state board in GMMGHSS, Kerala.
-          </p>
-          <p>
-            My 10th grade was done at Bharathamatha CMI Public School, Kerala with 96% under CBSE.
-          </p>
-        </div>
-
-        {/* Fifth Row: Interests Header */}
-        <div className="fifth-row">
-          <h1>INTERESTS</h1>
-          <p>
-            I love to groove and I was a part of college dance crew. Trying new styles of dancing is my chill pill.
-          </p>
-          <p>
-            Scribbling and sketching my thoughts and listening to music is my comfort zone. My genre of music depends on my mood. 
-          </p>
           
         </div>
+
+        
+        <div className="second-row">
+        
+          
+          <div>
+            <h1>MY SKILLS  INCLUDE </h1>
+          </div>
+
+          <div className="logo-container">
+            {console.log(`Skills: ${skills}`)}
+            {skills.map((skill) => (
+              <img
+                src={skill.image} 
+                alt="Skill Logo"
+                className="logo"
+              />
+            ))}
+          </div>
+
+          
+        </div>
+
+
+        
+        {/* Education Section */}
+        <div className="fourth-row">
+          <h1>EDUCATION</h1>
+          {education.map((edu) => (
+            <div key={edu.id}>
+              <p>{edu.description}</p>
+            </div>
+          ))}
+        </div>
+     
+
+        <div>
+            
+          </div>
       </div>
+      
     </div>
   );
 };
 
 export default Profile;
+

@@ -1,8 +1,9 @@
-import './Contact.css';
-import connect from '../assets/images/connect.png';
-import { Link } from 'react-router-dom'; 
-
 import React, { useState } from "react";
+import Navbar from './Navbar';
+import './Contact.css';
+import contactimg from '../assets/images/plane.png';
+import linkedinLogo from '../assets/images/linkedin.png'; // Replace with your image path
+import githubLogo from '../assets/images/github.png'; // Replace with your image path
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -41,49 +42,85 @@ const ContactForm = () => {
 
   return (
     <div>
-      <nav className="navbar">
-        <ul className="nav-links">
-          <li>
-            <Link to="/" className="nav-link">HOME</Link>
-          </li>
-        </ul>
-      </nav>
-      <div className="containercontact">
-        {/* Connect image */}
-        <div className="connectimg">
-          <img src={connect} alt="connect" className="img-connect" />
+      <Navbar />
+      <div className="social-links">
+
+      <div className="git">
+        <a href="https://github.com/navaneetha2002" target="_blank" rel="noopener noreferrer">
+          <img src={githubLogo} alt="GitHub" className="social-icon" />
+        </a>
         </div>
-
-        {/* Contact form */}
-        <form className="contactforms" onSubmit={handleSubmit}>
-          {/* Form fields */}
-          <div className="mb-3">
-            <label htmlFor="name" className="form-label-name">NAME</label>
-            <input type="text" id="name" className="form-control" placeholder="Your Name" value={formData.name} onChange={handleChange} required />
+        <div className="linkedin">
+        <a href="https://www.linkedin.com/in/navaneetha-prakash-56a90726b/" target="_blank" rel="noopener noreferrer">
+          <img src={linkedinLogo} alt="LinkedIn" className="social-icon" />
+        </a>
+        </div>
+       
+        
+      </div>
+      <div className="containercontact">
+        <div className="content-row">
+          <div className="image-container">
+            <img src={contactimg} alt="Contact Us" className="contact-image" />
           </div>
-          <div className="mb-3">
-            <label htmlFor="email" className="form-label-email">EMAIL</label>
-            <input type="email" id="email" className="form-control" placeholder="Your Email" value={formData.email} onChange={handleChange} required />
+          <div className="form-container">
+            <div className="text-content">
+              <h1>REACH OUT TO ME!</h1>
+              <p>Got feedback or questions? <br />Drop me a note!</p>
+            </div>
+            <form className="contactforms" onSubmit={handleSubmit}>
+              <div className="mb-3">
+                <label htmlFor="name" className="form-label">NAME</label>
+                <input
+                  type="text"
+                  id="name"
+                  className="form-control-name"
+                  placeholder="Your Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="email" className="form-label">EMAIL</label>
+                <input
+                  type="email"
+                  id="email"
+                  className="form-control-email"
+                  placeholder="Your Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="subject" className="form-label">SUBJECT</label>
+                <input
+                  type="text"
+                  id="subject"
+                  className="form-control-subject"
+                  placeholder="Subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="message" className="form-label">MESSAGE</label>
+                <textarea
+                  id="message"
+                  className="form-control-msg"
+                  rows="5"
+                  placeholder="Your Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                ></textarea>
+              </div>
+              <div className="text-center">
+                <button type="submit" className="btn btn-primary">Send Message</button>
+              </div>
+            </form>
           </div>
-          <div className="mb-3">
-            <label htmlFor="subject" className="form-label-subject">SUBJECT</label>
-            <input type="text" id="subject" className="form-control" placeholder="Subject" value={formData.subject} onChange={handleChange} />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="message" className="form-label-msg">MESSAGE</label>
-            <textarea id="message" className="form-control-msg" rows="5" placeholder="Your Message" value={formData.message} onChange={handleChange} required></textarea>
-          </div>
-
-          {/* Submit Button */}
-          <div className="text-center">
-            <button type="submit" className="btn btn-primary">Send Message</button>
-          </div>
-        </form>
-
-        {/* Heading and Paragraph */}
-        <div className="text-content">
-          <h1>REACH OUT TO ME!</h1>
-          <p>Got feedback or questions? Drop me a note!</p>
         </div>
       </div>
     </div>

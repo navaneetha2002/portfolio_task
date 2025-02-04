@@ -1,0 +1,139 @@
+/* Navbar Styles */
+.navbar {
+    background-color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-radius: 0;
+}
+
+.navbar-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    margin-left: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: rgb(82, 129, 170);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #294861;
+}
+
+.navbar-links li.active .nav-link {
+    color: #294861;
+    font-weight: bold;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* For mobile screens */
+@media screen and (max-width: 768px) {
+    /* Hide links by default on mobile */
+    .navbar-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 60px; /* Adjust the position to be below the navbar */
+        left: 0;
+        padding: 10px;
+    }
+
+    /* Display links when the menu is active */
+    .navbar-links.active {
+        display: flex;
+    }
+
+    /* Adjust spacing between links on mobile */
+    .navbar-links li {
+        margin: 10px 0;
+    }
+
+    /* Show hamburger icon on mobile */
+    .hamburger {
+        display: block;
+    }
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  .nav-image {
+    width: 40px; /* Adjust the width as needed */
+    height: auto;
+    margin: 0 10px; /* Space between images */
+  }
+  
+  .hamburger {
+    display: none;
+  }
+  
+  /* Mobile responsive adjustments */
+  @media (max-width: 768px) {
+    .navbar-links {
+      flex-direction: column;
+      display: none;
+    }
+    .navbar-links.active {
+      display: flex;
+    }
+    .hamburger {
+      display: block;
+    }
+  }
+
+  .nav-link-img1 {
+    width: 30px;  /* Adjust the width to make the image smaller */
+    height: 30px; /* Maintain aspect ratio */
+  }
+  .nav-link-img2 {
+    width: 50px;  /* Adjust the width to make the image smaller */
+    height: 50px; /* Maintain aspect ratio */
+  }
+  
+  /* Navbar Image Adjustments */
+.nav-image {
+    width: 30px; /* Make the images smaller */
+    height: auto;
+    margin: 0 5px; /* Reduce the space between images */
+}
+
+.nav-link-img1 {
+    width: 25px;  /* Make the first image smaller */
+    height: 25px; /* Maintain aspect ratio */
+}
+
+/* Other navbar adjustments */
+.navbar-links li {
+    margin-left: 15px; /* Reduce space between navbar links */
+}

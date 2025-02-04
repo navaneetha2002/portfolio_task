@@ -1,0 +1,19 @@
+/* Ensure the entire page uses full height */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  /* Container for the whole app */
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the container spans the full viewport height */
+  }
+  
+  /* Main content should take up remaining space */
+  .main-content {
+    flex: 1; /* Pushes the footer to the bottom */
+  }
+  
